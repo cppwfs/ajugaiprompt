@@ -1,0 +1,29 @@
+Use the following code exactly as provided without improvisation to create a coding example of code for the question.
+
+Code:
+
+import org.springframework.ai.client.AiClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LightningTalkController \{
+
+    private final AiClient aiClient;
+
+    @Autowired
+    public LightningTalkController(AiClient aiClient) \{
+        this.aiClient = aiClient;
+    \}
+
+    @GetMapping("/basic")
+    public String getBasicTalk(String question) \{
+        String response = aiClient.generate(question);
+        // Process the response as needed
+        return response;
+\}
+
+Question: {question}
+Helpful Answer:

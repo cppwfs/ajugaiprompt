@@ -1,0 +1,38 @@
+= Partitioned Job
+
+Provide a sample Spring AI application that demonstrates basic prompts
+
+== Requirements:
+
+* Java 17 or Above
+
+== Build:
+
+[source,shell]
+----
+./mvnw clean install
+----
+
+== Execute:
+
+[source,shell]
+----
+export spring_ai_openai_apiKey=<your chatgpt key>
+java -jar target/ajugaiprompt-0.0.1-SNAPSHOT.jar
+----
+
+=== Example URLs you can use
+In our examples below we will ask the following question
+`Write an outline of a lightning talk on topic of spring ai and provide a coding example`
+
+==== Without prompt engineering uses the /basic endpoint for example:
+
+```
+http://localhost:8080/basic?question=Write%20an%20outline%20of%20a%20lightning%20talk%20on%20topic%20of%20spring%20ai%20and%20provide%20a%20coding%20example
+```
+
+==== With prompt engineering uses the pro endpoint for example:
+
+```
+http://localhost:8080/pro?question=Write%20an%20outline%20of%20a%20lightning%20talk%20on%20topic%20of%20spring%20ai%20and%20provide%20a%20coding%20example
+```
