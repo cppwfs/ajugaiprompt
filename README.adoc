@@ -10,7 +10,7 @@ Provide a sample Spring AI application that demonstrates basic prompts
 
 [source,shell]
 ----
-./mvnw clean install
+./mvnw clean package
 ----
 
 == Execute:

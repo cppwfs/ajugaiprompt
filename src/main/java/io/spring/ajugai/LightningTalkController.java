@@ -43,7 +43,7 @@ public class LightningTalkController {
         Prompt prompt = promptTemplate.create(map);
         Completion completion = new Completion(aiClient.generate(prompt).getGeneration().getText());
         System.out.println(completion.getCompletion());
-        return "<p>"+completion.getCompletion()+"</p>";
+        return completion.getCompletion();
     }
 
 }
